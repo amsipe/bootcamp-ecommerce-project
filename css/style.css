@@ -1,0 +1,25 @@
+body {
+    background-color: #3498db;
+}
+.carousel {
+    width: 70%;
+    background-color: #3498db;
+    margin: 30px auto;
+}
+
+.carousel-nav {
+    width: 60%;
+    background-color: #3498db;
+    margin: 0 auto;
+}
+.carousel img {
+    height: 300px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.carousel-nav img {
+    height: 90px;
+    width: auto;
+    margin: 0 auto;
+}
