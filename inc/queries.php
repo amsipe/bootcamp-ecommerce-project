@@ -46,7 +46,45 @@ function getFeaturedProducts(){
     return $products;
 }
 
+function searchProducts($search){
+    try {
+        $db = getDB();
+        $sql = "SELECT
+        *
+        FROM
+        products
+        left join products_categories using (productID) 
+        left join categories using (categoryID)
+        where
+        (products.name like ? 
+        or products.description like ?
+        or categories.category_name like ?)
+        ";
+        $results = $db->prepare($sql);
+        $results->bindValue(1,"%".$search."%",PDO::PARAM_STR);
+        $results->bindValue(2,"%".$search."%",PDO::PARAM_STR);
+        $results->bindValue(3,"%".$search."%",PDO::PARAM_STR);
+        $results->execute();
+    }catch (Exception $e){
+        echo "No Results";
+        exit;
+    }
+    $products = $results->fetchAll();
+    return $products;
+}
 
-
-
+function getOneProduct($id){
+    try {
+        $db = getDB();
+        $sql = "SELECT * FROM products WHERE products.productID = ?";
+        $results = $db->prepare($sql);
+        $results->bindParam(1,$id,PDO::PARAM_INT);
+        $results->execute();
+    }catch (Exception $e){
+        echo "Product not found.";
+        exit;
+    }
+    $item = $results->fetch(PDO::FETCH_ASSOC);
+    return $item;
+}
 
