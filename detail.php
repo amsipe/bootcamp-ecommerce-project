@@ -15,17 +15,13 @@ include("inc/queries.php");
         
     </header>
     <section>
-            <!-- carousel here -->
         <ul>
+            
         <?php
 
-            $products = getFeaturedProducts();
-            foreach($products as $product){
-                echo '
-                <li>
-                    <img style="width:auto;height:300px;" src="' . $product["imgUrl"] . '" alt="' . $product["name"] . '">' .
-                '</li>';
-            };
+            $product = getOneProduct(2);
+            var_dump($product);
+
         ?>
         </ul>
     </section>

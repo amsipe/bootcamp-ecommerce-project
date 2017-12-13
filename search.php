@@ -15,17 +15,23 @@ include("inc/queries.php");
         
     </header>
     <section>
-            <!-- carousel here -->
         <ul>
+            
         <?php
 
-            $products = getFeaturedProducts();
+            $products = searchProducts("wreath");
             foreach($products as $product){
                 echo '
                 <li>
-                    <img style="width:auto;height:300px;" src="' . $product["imgUrl"] . '" alt="' . $product["name"] . '">' .
-                '</li>';
+                    <ul>
+                        <li> '. $product["name"] . '</li>
+                        <li>' . $product["price"] . '</li>
+                        <li><img style="width:200px;height:auto;" src="' . $product["imgUrl"] . '"></li>
+                        <li>' . $product["description"] . '</li>
+                    </ul>
+                </li>';
             };
+
         ?>
         </ul>
     </section>

@@ -15,17 +15,22 @@ include("inc/queries.php");
         
     </header>
     <section>
-            <!-- carousel here -->
         <ul>
+            
         <?php
 
-            $products = getFeaturedProducts();
-            foreach($products as $product){
+            $comments = getAllComments();
+            foreach($comments as $comment){
                 echo '
                 <li>
-                    <img style="width:auto;height:300px;" src="' . $product["imgUrl"] . '" alt="' . $product["name"] . '">' .
-                '</li>';
+                    <ul>
+                        <li>'. $comment["firstName"] . ' ' . $comment["lastName"] . ' Says: </li>
+                        <li>' . $comment["commentText"] . '</li>
+                        <li> On: ' . $comment["dateAdded"] . '</li>
+                    </ul>
+                </li>';
             };
+
         ?>
         </ul>
     </section>
