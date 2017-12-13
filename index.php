@@ -9,6 +9,9 @@ include("inc/queries.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Holiday Decorations Store</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header>
@@ -16,22 +19,38 @@ include("inc/queries.php");
     </header>
     <section>
             <!-- carousel here -->
-        <ul>
-        <?php
+        <div class="carousel">
+            <!-- <ul> -->
+            <?php
 
-            $products = getFeaturedProducts();
-            foreach($products as $product){
-                echo '
-                <li>
-                    <img style="width:auto;height:300px;" src="' . $product["imgUrl"] . '" alt="' . $product["name"] . '">' .
-                '</li>';
-            };
-        ?>
-        </ul>
+                $products = getFeaturedProducts();
+                foreach($products as $product){
+                    echo '
+                    <div>
+                        <img src="' . $product["imgUrl"] . '" alt="' . $product["name"] . '">' .
+                    '</div>';
+                };
+            ?>
+            <!-- </ul> -->
+        </div>
+        <div class="carousel-nav">
+            <!-- <ul> -->
+            <?php
+                foreach($products as $product){
+                    echo '
+                    <div>
+                        <img src="' . $product["imgUrl"] . '" alt="' . $product["name"] . '">' .
+                    '</div>';
+                };
+            ?>
+            <!-- </ul> -->
+        </div>
     </section>
     <footer>
         
     </footer>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
