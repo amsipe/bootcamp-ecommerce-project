@@ -1,0 +1,128 @@
+/**********************
+HEADING
+**********************/
+.header {
+   background-image: url(https://image.ibb.co/c5g8C6/Header_xmas_store.png); 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 300px;
+   width: auto;
+   display: block;
+   background-color: #030326;
+
+}
+
+
+/**********************
+PRODUCTS PAGE
+**********************/
+body {
+    margin: 0;
+}
+.products {padding-bottom: 42px;}
+.products h2 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1;
+    font-weight: normal;
+
+}
+.products ul.item li {
+    display: inline-block;
+    list-style: none;
+    width: 250px;
+    text-align: center;
+    margin: 0 0 3px 3px;
+    position: relative;
+    left: -17px;
+}
+/* .products ul.item li a:hover:after {
+    font-size: 50px; position: absolute; top:35px; right:30px; color: #3888c2; vertical-align: top;
+} */
+.products ul.item li a {
+    background: white;
+    display: block;
+
+    text-decoration: none;
+}
+.details-button {
+  color: #888;
+}
+.products ul.item li a:hover {
+    opacity: .5;
+    color: rgb(102, 102, 102);
+}
+.products ul.item li img {
+    width: 95%;
+    height: 20%;
+    border: 1px solid #f0eeed;
+}
+.products ul.item li p {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+}
+/* .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  .text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  } */
+
+/**********************
+FOOTER
+**********************/
+.footer {
+    font-size: 0.75em;
+    text-align: center;
+    padding-top: 50px;
+    color: #a5a5a5;
+    background: #f0eeed;
+    border-top: 3px solid #dddddd;
+  }
+
+/**********************
+NAVIGATION
+**********************/
+
+nav {
+    text-align: center;
+    padding: 10px 0;
+
+    background: #ec2426;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    font-weight: 600;
+    padding: 15px 10px;
+  }
+
+  /* Nav Links */
+  nav a {
+    color: #fff;
+  }
+  
+  /* Selected Nav Links */
+  nav a:hover {
+    color: #ee9321;
+  }
