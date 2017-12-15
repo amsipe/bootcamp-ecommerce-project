@@ -88,3 +88,22 @@ function getOneProduct($id){
     return $item;
 }
 
+function addContactForm($firstName,$lastName,$email,$phone,$comment){
+    try {
+        $db = getDB();
+        $sql = "INSERT INTO `comments` (`commentText`, `email`, `phone`, `firstName`, `lastName`) VALUES (?, ?, ?, ?, ?)";
+        $results = $db->prepare($sql);
+        $results->bindParam(1,$comment,PDO::PARAM_STR);
+        $results->bindParam(2,$email,PDO::PARAM_STR);
+        $results->bindParam(3,$phone,PDO::PARAM_STR);
+        $results->bindParam(4,$firstName,PDO::PARAM_STR);
+        $results->bindParam(5,$lastName,PDO::PARAM_STR);
+        $results->execute();
+    }catch(Exception $e){
+        echo "Bad Query";
+        exit;
+    }
+    return true;
+
+}
+
