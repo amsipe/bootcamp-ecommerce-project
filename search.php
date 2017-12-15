@@ -45,16 +45,7 @@ if (isset($_GET["s"])) {
                     $products = getAllProducts();
                 }
                 foreach($products as $product){
-                    echo '
-                    
-                    <li class="search-result-item" data-category="'. $product["category_name"]. '">
-                        <ul>
-                            <li> '. $product["name"] . '</li>
-
-                            <li>' . $product["price"] . '</li>
-                            <li><img src="' . $product["imgUrl"] . '"></li>
-                        </ul></a>
-                    </li>';
+                    echo getProductHTML($product);
                 };
     
             ?>

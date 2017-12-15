@@ -115,3 +115,15 @@ function addContactForm($firstName,$lastName,$email,$phone,$comment){
 
 }
 
+function getProductHTML($product){
+    $html = '
+    <li>
+        <ul><a>
+            <li><h2> '. $product["name"] . '</h2></li>
+            <li>' . $product["price"] . '</li>
+            <li class="container"><img src="' . $product["imgUrl"] . '" class="img"><div class="middle"><div class="text">View Details</div></div></li>
+        </ul></a>
+    </li>';
+    return $html;
+
+}
