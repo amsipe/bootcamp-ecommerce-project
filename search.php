@@ -40,7 +40,7 @@ if (isset($_GET["s"])) {
                 
             <?php
                 if(!empty($search)){
-                    $products = searchProducts("santa","4");
+                    $products = searchProducts($search);
                 }else {
                     $products = getAllProducts();
                 }
