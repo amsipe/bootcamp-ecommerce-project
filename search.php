@@ -28,12 +28,11 @@ if (isset($_GET["s"])) {
                 foreach($products as $product){
                     echo '
                     <li>
-                        <ul>
-                            <li> '. $product["name"] . '</li>
+                        <ul><a>
+                            <li><h2> '. $product["name"] . '</h2></li>
                             <li>' . $product["price"] . '</li>
-                            <li><img style="width:200px;height:auto;" src="' . $product["imgUrl"] . '"></li>
-                            <li>' . $product["description"] . '</li>
-                        </ul>
+                            <li><img src="' . $product["imgUrl"] . '"></li>
+                        </ul></a>
                     </li>';
                 };
     
