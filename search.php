@@ -17,19 +17,19 @@ if (isset($_GET["s"])) {
         <div class="category-container">
             <ul class="category-list">
                 <li>
-                    <a class="cat-selector" href="#">All</a>
+                    <span class="cat-selector">All</span>
                 </li>
                 <li>
-                    <a class="cat-selector" href="#">Ornaments</a>
+                    <span class="cat-selector">Ornaments</span>
                 </li>
                 <li>
-                    <a class="cat-selector" href="#">Wreaths and Garland</a>
+                    <span class="cat-selector">Wreaths and Garland</span>
                 </li>
                 <li>
-                    <a class="cat-selector" href="#">Outdoor Decorations</a>
+                    <span class="cat-selector">Outdoor Decorations</span>
                 </li>
                 <li>
-                    <a class="cat-selector" href="#">Indoor Decorations</a>
+                    <span class="cat-selector">Indoor Decorations</span>
                 </li>
             </ul>
         </div>

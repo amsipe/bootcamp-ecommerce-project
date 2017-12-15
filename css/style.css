@@ -218,8 +218,9 @@ ul.category-list li:hover {
     background: #c00004;
 }
 
-ul.category-list li a {
+ul.category-list li span.cat-selector {
     display: block;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
