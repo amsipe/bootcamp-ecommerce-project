@@ -9,11 +9,30 @@ if (isset($_GET["s"])) {
 
 <?php include("inc/header.php"); ?>
     <section>
-        <form method="get" action="search.php">
+        <form method="get" action="search.php" class="search-form">
             <label for="s">Search:</label>
             <input type="text" name="s" id="s" />
             <input type="submit" value="Search" />  
         </form>
+        <div class="category-container">
+            <ul class="category-list">
+                <li>
+                    <a class="cat-selector" href="#">All</a>
+                </li>
+                <li>
+                    <a class="cat-selector" href="#">Ornaments</a>
+                </li>
+                <li>
+                    <a class="cat-selector" href="#">Wreaths and Garland</a>
+                </li>
+                <li>
+                    <a class="cat-selector" href="#">Outdoor Decorations</a>
+                </li>
+                <li>
+                    <a class="cat-selector" href="#">Indoor Decorations</a>
+                </li>
+            </ul>
+        </div>
     </section>
     <section>
         <div class="products">
@@ -27,9 +46,11 @@ if (isset($_GET["s"])) {
                 }
                 foreach($products as $product){
                     echo '
-                    <li>
-                        <ul><a>
-                            <li><h2> '. $product["name"] . '</h2></li>
+                    
+                    <li class="search-result-item" data-category="'. $product["category_name"]. '">
+                        <ul>
+                            <li> '. $product["name"] . '</li>
+
                             <li>' . $product["price"] . '</li>
                             <li><img src="' . $product["imgUrl"] . '"></li>
                         </ul></a>
