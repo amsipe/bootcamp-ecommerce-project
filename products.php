@@ -24,14 +24,7 @@
 
                 $products = getAllProducts();
                 foreach($products as $product){
-                    echo '
-                    <li>
-                        <ul><a>
-                            <li><h2> '. $product["name"] . '</h2></li>
-                            <li>' . $product["price"] . '</li>
-                            <li class="container"><img src="' . $product["imgUrl"] . '" class="img"><div class="middle"><div class="text">View Details</div></div></li>
-                        </ul></a>
-                    </li>';
+                    echo getProductHTML($product);
                 };
 
 
