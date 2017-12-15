@@ -46,13 +46,14 @@ if (isset($_GET["s"])) {
                 }
                 foreach($products as $product){
                     echo '
+                    
                     <li class="search-result-item" data-category="'. $product["category_name"]. '">
                         <ul>
                             <li> '. $product["name"] . '</li>
+
                             <li>' . $product["price"] . '</li>
-                            <li><img style="width:200px;height:auto;" src="' . $product["imgUrl"] . '"></li>
-                            <li>' . $product["description"] . '</li>
-                        </ul>
+                            <li><img src="' . $product["imgUrl"] . '"></li>
+                        </ul></a>
                     </li>';
                 };
     

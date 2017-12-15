@@ -1,5 +1,6 @@
 <?php include("inc/queries.php"); ?>
 
+
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
                         <ul><a>
                             <li><h2> '. $product["name"] . '</h2></li>
                             <li>' . $product["price"] . '</li>
-                            <li><img src="' . $product["imgUrl"] . '"></li>
+                            <li class="container"><img src="' . $product["imgUrl"] . '" class="img"><div class="middle"><div class="text">View Details</div></div></li>
                         </ul></a>
                     </li>';
                 };
