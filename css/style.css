@@ -2,14 +2,18 @@
 
 body {
     background-color: #3498db;
+    margin: 0;
+    padding: 0;
 }
 .carousel {
     width: 70%;
     background-color: #3498db;
     margin: 30px auto;
+    height: 300px;
 }
 
 .carousel-nav {
+    height: 90px;
     width: 60%;
     background-color: #3498db;
     margin: 0 auto;
@@ -103,8 +107,8 @@ body {
     color: rgb(102, 102, 102);
 }
 .products ul.item li img {
-    width: 95%;
-    height: 20%;
+    width: 200px;
+    height: auto;
     border: 1px solid #f0eeed;
 }
 .products ul.item li p {
