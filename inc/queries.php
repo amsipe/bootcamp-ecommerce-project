@@ -5,7 +5,9 @@ function getAllProducts()
  {
     try {
         $db = getDB();
-        $sql = "SELECT * FROM products";
+        $sql = "SELECT * FROM products
+        left join products_categories using (productID)
+        left join categories using (categoryID)";
         $results = $db->query($sql);
         // $results = $stmt->execute();
     }catch (Exception $e)
@@ -46,7 +48,7 @@ function getFeaturedProducts(){
     return $products;
 }
 
-function searchProducts($search){
+function searchProducts($search, $cat = null){
     try {
         $db = getDB();
         $sql = "SELECT
@@ -60,10 +62,16 @@ function searchProducts($search){
         or products.description like ?
         or categories.category_name like ?)
         ";
+        if(isset($cat)){ 
+            $sql = $sql . " AND categories.categoryID = ?";
+        }
         $results = $db->prepare($sql);
         $results->bindValue(1,"%".$search."%",PDO::PARAM_STR);
         $results->bindValue(2,"%".$search."%",PDO::PARAM_STR);
         $results->bindValue(3,"%".$search."%",PDO::PARAM_STR);
+        if(isset($cat)){
+            $results->bindParam(4,$cat,PDO::PARAM_STR);
+        }
         $results->execute();
     }catch (Exception $e){
         echo "No Results";

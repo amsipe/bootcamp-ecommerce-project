@@ -52,6 +52,14 @@ $(document).ready(function(){
             }
         }
     })
+
+    $(".cat-selector").on('click', function(){
+        var innerText = $(this).text().toLowerCase();
+        $('*[data-category]').show();
+        if(innerText !== "all"){
+            $('*[data-category]').not('*[data-category="'+innerText+'"]').hide();
+        }
+    })
 })
 
 

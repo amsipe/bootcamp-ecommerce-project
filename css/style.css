@@ -180,4 +180,36 @@ nav {
     color: #ee9321;
   }
 
-z
+/* Search Page */
+
+.search-form {
+    margin: 10px auto;
+    width: auto;
+    display: block;
+    text-align: center;
+}
+
+.category-container {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+ul.category-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.category-list li {
+    display: inline-block;
+    font-size: .75em;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+ul.category-list li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
