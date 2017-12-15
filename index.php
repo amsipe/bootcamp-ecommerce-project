@@ -20,7 +20,6 @@ include("inc/queries.php");
     <section>
             <!-- carousel here -->
         <div class="carousel">
-            <!-- <ul> -->
             <?php
 
                 $products = getFeaturedProducts();
@@ -31,10 +30,8 @@ include("inc/queries.php");
                     '</div>';
                 };
             ?>
-            <!-- </ul> -->
         </div>
         <div class="carousel-nav">
-            <!-- <ul> -->
             <?php
                 foreach($products as $product){
                     echo '
@@ -43,7 +40,6 @@ include("inc/queries.php");
                     '</div>';
                 };
             ?>
-            <!-- </ul> -->
         </div>
     </section>
     <footer>
