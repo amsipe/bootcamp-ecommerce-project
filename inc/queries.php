@@ -117,7 +117,7 @@ function addContactForm($firstName,$lastName,$email,$phone,$comment){
 
 function getProductHTML($product){
     $html = '
-    <li>
+    <li class="search-result-item" data-category="'. $product["category_name"]. '">
         <ul><a>
             <li><h2> '. $product["name"] . '</h2></li>
             <li>' . $product["price"] . '</li>
