@@ -1,7 +1,10 @@
 <html>
 <head>
-	<title><?php echo $pageTitle; ?></title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
 </head>
 <body>
 

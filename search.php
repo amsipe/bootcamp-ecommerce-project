@@ -17,29 +17,29 @@ if (isset($_GET["s"])) {
     </section>
     <section>
         <div class="products">
+            <ul class="item">
+                
+            <?php
+                if(!empty($search)){
+                    $products = searchProducts($search);
+                }else {
+                    $products = getAllProducts();
+                }
+                foreach($products as $product){
+                    echo '
+                    <li>
+                        <ul>
+                            <li> '. $product["name"] . '</li>
+                            <li>' . $product["price"] . '</li>
+                            <li><img style="width:200px;height:auto;" src="' . $product["imgUrl"] . '"></li>
+                            <li>' . $product["description"] . '</li>
+                        </ul>
+                    </li>';
+                };
+    
+            ?>
+            </ul>
             
         </div>
-        <ul class="item">
-            
-        <?php
-            if(!empty($search)){
-                $products = searchProducts($search);
-            }else {
-                $products = getAllProducts();
-            }
-            foreach($products as $product){
-                echo '
-                <li>
-                    <ul>
-                        <li> '. $product["name"] . '</li>
-                        <li>' . $product["price"] . '</li>
-                        <li><img style="width:200px;height:auto;" src="' . $product["imgUrl"] . '"></li>
-                        <li>' . $product["description"] . '</li>
-                    </ul>
-                </li>';
-            };
-
-        ?>
-        </ul>
     </section>
     <?php include("inc/footer.php"); ?>
