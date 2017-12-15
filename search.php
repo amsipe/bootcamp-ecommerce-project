@@ -1,5 +1,10 @@
 <?php
 include("inc/queries.php");
+
+$search = null;
+if (isset($_GET["s"])) {
+    $search = filter_input(INPUT_GET,"s",FILTER_SANITIZE_STRING);
+  }
 ?>
 
 <!DOCTYPE html>
@@ -15,11 +20,21 @@ include("inc/queries.php");
         
     </header>
     <section>
+        <form method="get" action="search.php">
+            <label for="s">Search:</label>
+            <input type="text" name="s" id="s" />
+            <input type="submit" value="Search" />  
+        </form>
+    </section>
+    <section>
         <ul>
             
         <?php
-
-            $products = searchProducts("wreath");
+            if(!empty($search)){
+                $products = searchProducts($search);
+            }else {
+                $products = getAllProducts();
+            }
             foreach($products as $product){
                 echo '
                 <li>

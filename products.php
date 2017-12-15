@@ -32,7 +32,6 @@ include("inc/queries.php");
                 </li>';
             };
 
-
         ?>
         </ul>
     </section>

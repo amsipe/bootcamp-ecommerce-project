@@ -23,3 +23,25 @@ body {
     width: auto;
     margin: 0 auto;
 }
+
+
+
+#contact-form label {
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#contact-form input {
+    display: inline-block;
+}
+
+#contact-form label.error {
+    color: red;
+    font-style: italic;
+    font-size: .75em;
+    margin-left: 10px;
+    display: inline;
+    width: auto;
+}
+
