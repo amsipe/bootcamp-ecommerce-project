@@ -103,8 +103,8 @@ body {
     color: rgb(102, 102, 102);
 }
 .products ul.item li img {
-    width: 95%;
-    height: 20%;
+    width: auto;
+    height: 150px;
     border: 1px solid #f0eeed;
 }
 .products ul.item li p {

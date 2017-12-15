@@ -7,18 +7,7 @@ if (isset($_GET["s"])) {
   }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Holiday Decorations Store</title>
-</head>
-<body>
-    <header>
-        
-    </header>
+<?php include("inc/header.php"); ?>
     <section>
         <form method="get" action="search.php">
             <label for="s">Search:</label>
@@ -27,7 +16,10 @@ if (isset($_GET["s"])) {
         </form>
     </section>
     <section>
-        <ul>
+        <div class="products">
+            
+        </div>
+        <ul class="item">
             
         <?php
             if(!empty($search)){
@@ -50,9 +42,4 @@ if (isset($_GET["s"])) {
         ?>
         </ul>
     </section>
-    <footer>
-        
-    </footer>
-    
-</body>
-</html>
+    <?php include("inc/footer.php"); ?>
