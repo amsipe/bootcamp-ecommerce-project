@@ -121,7 +121,21 @@ function getProductHTML($product){
         <ul><a>
             <li><h2> '. $product["name"] . '</h2></li>
             <li>' . $product["price"] . '</li>
-            <li class="container"><img src="' . $product["imgUrl"] . '" class="img"><div class="middle"><div class="text">View Details</div></div></li>
+            <li class="container"><img src="' . $product["imgUrl"] . '" class="img"><div class="middle"><div class="btn"><a href="detail.php?id=' . $product["productID"] . '">View Details</a></div></div></li>
+        </ul></a>
+    </li>';
+    return $html;
+
+}
+
+function getViewDetailsHTML($product){
+    $html = '
+    <li class="search-result-item" data-category="'. $product["category_name"]. '">
+        <ul><a>
+            <li><h2> '. $product["name"] . '</h2></li>
+            <li>' . $product["price"] . '</li>
+            <li class="container"><img src="' . $product["imgUrl"] . '" class="img"></li>
+            <li>' . $product["description"] . '</li>
         </ul></a>
     </li>';
     return $html;
