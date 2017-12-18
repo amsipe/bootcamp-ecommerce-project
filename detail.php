@@ -1,5 +1,10 @@
 <?php
 include("inc/queries.php");
+
+$id = null;
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
+  }
 ?>
 
 <?php include("inc/header.php"); ?>
@@ -8,8 +13,8 @@ include("inc/queries.php");
             
         <?php
 
-            $product = getOneProduct(2);
-            var_dump($product);
+            $product = getOneProduct($id);
+            echo getViewDetailsHTML($product);
 
         ?>
         </ul>
